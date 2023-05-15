@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+		html, body{
+			text-align: center;
+		}
+		button {
+			border: 1px solid #cecece;
+			background-color: transparent;
+			padding: 10px;
+		}
+		button:hover{
+			background-color: #cecece;
+		}
+		button:active{
+			background-color: #aaaaaa;
+		}
+	</style>
+
+</head>
+<body>
+    <h1>Начальный курс по HTML/JS/CSS</h1>
+	<p>Здесь изучают веб разработку</p>
+	<button>Записаться</button>
+    <script>
+        document.querySelector("button").addEventListener("click", function(){
+            alert("Готово!")
+        });
+    </script>
+</body>
+</html>
