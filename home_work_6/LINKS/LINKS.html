@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table td {
+
+        width: 120px;
+        height: 30px;
+        border-right: solid #ff0000 3px;
+        border-left: none;
+        border-top: none;
+        border-bottom: none;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    table td:last-child {
+        border-right: none;
+    }
+
+    .divstyle a {
+        padding: 10px;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    splat {
+        color: #ff0000;
+        font-size: 36px;
+        font-weight: 900;
+    }
+</style>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td><a href="https://github.com/SergeiGolovkin/htmlCSS" target="_blank"> Первая ссылка </a> </td>
+                <td><a href="https://github.com/SergeiGolovkin/htmlCSS" target="_blank"> Вторая ссылка </a> </td>
+                <td><a href="https://github.com/SergeiGolovkin/htmlCSS" target="_blank"> Третья ссылка </a> </td>
+                <td><a href="https://github.com/SergeiGolovkin/htmlCSS" target="_blank"> Четвертая ссылка </a> </td>
+                <td><a href="https://github.com/SergeiGolovkin/htmlCSS" target="_blank"> Пятая ссылка </a> </td>
+            </tr>
+        </table>
+    </div>
+    <div class="divstyle">
+        <a href="https://github.com/SergeiGolovkin/htmlCSS" target="_blank"> Первая ссылка </a>
+        <splat> |</splat>
+        <a href="https://github.com/SergeiGolovkin/htmlCSS" target="_blank"> Вторая ссылка</a>
+        <splat> |</splat>
+        <a href="https://github.com/SergeiGolovkin/htmlCSS" target="_blank"> Третья ссылка </a>
+        <splat> |</splat>
+        <a href="https://github.com/SergeiGolovkin/htmlCSS" target="_blank"> Четвертая ссылка </a>
+        <splat> |</splat>
+        <a href="https://github.com/SergeiGolovkin/htmlCSS" target="_blank"> Пятая ссылка </a>
+
+    </div>
+</body>
+
+</html>
