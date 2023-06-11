@@ -14,46 +14,59 @@
             document.querySelector(".survey_form").addEventListener("submit", function (event) {
                 event.preventDefault();
 
+                let form = document.querySelector(".survey_form")
+
                 let surname = form.querySelector("input[name='sname']").value;
-                let name = form.querySelector("input[name='name']").value;
+                let name = form.querySelector("input[name='nname']").value;
                 let patronymic = form.querySelector("input[name='pname']").value;
                 let age = form.querySelector("input[name='age']").value;
                 let gender;
+                let genderLebel;
 
                 let selectedRadio = form.querySelector("input[name='gender']:checked")
                 if (selectedRadio) {
                     gender = selectedRadio.value;
                 }
+                else {
+                    genderLebel = "Вы не выбрали пол"
+                }
                 let pension = "";
-                let genderLebel = "";
+
                 if (gender === "male") {
                     genderLebel = "мужской";
-                    { age >= 63 ? pension + "да" : pension + "нет" };
+                    if (age >= 63) {
+                        pension += "да";
+                    }
+                    else {
+                        pension += "нет";
+                    }
 
                 }
                 if (gender === "female") {
                     genderLebel = "женский";
-                    { age >= 58 ? pension + "Да" : pension + "Нет" };
+                    if (age >= 58) {
+                        pension += "да";
+                    }
+                    else {
+                        pension += "нет";
+                    }
                 }
-                else {
-                    genderLebel = "Вы не выбрали пол"
-                }
-                alert(`
-    Ваше ФИО: ${surname} ${name} ${patronymic}
-    Ваш возраст в годах: ${age}
-    Ваш возраст в днях: ${age * 365}
-    Через 5 лет вам будет: ${Number(age) + 5}
-    Ваш пол: ${genderLebel}
-    Вы на пенсии: ${pension}
-    `);
-               
-        });
+
+                alert(`Ваше ФИО: ${surname} ${name} ${patronymic}
+Ваш возраст в годах: ${age}
+Ваш возраст в днях: ${age * 365}
+Через 5 лет вам будет: ${Number(age) + 5}
+Ваш пол: ${genderLebel}
+Вы на пенсии: ${pension}
+`);
+
+            });
         });
     </script>
     <h1>Опрос</h1>
-    <form>
+    <form class="survey_form">
         <div><label>Фамилия<input name="sname"></label></div>
-        <div><label>Имя<input name="name"></label></div>
+        <div><label>Имя<input name="nname"></label></div>
         <div><label>Отчество<input name="pname"></label></div>
         <div><label>Возраст в годах<input type="number" min="0" max="150" name="age"></label></div>
 
